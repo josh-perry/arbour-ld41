@@ -1,0 +1,24 @@
+[submodule "src/libs/strong"]
+	path = src/libs/strong
+	url = https://github.com/BlackBulletIV/strong.git
+[submodule "src/libs/lume"]
+	path = src/libs/lume
+	url = https://github.com/rxi/lume.git
+[submodule "src/libs/lovebite"]
+	path = src/libs/lovebite
+	url = https://github.com/josh-perry/lovebite.git
+[submodule "src/libs/log"]
+	path = src/libs/log
+	url = https://github.com/josh-perry/log.lua.git
+[submodule "src/libs/inspect"]
+	path = src/libs/inspect
+	url = https://github.com/kikito/inspect.lua.git
+[submodule "src/libs/hump"]
+	path = src/libs/hump
+	url = https://github.com/vrld/hump.git
+[submodule "src/libs/baton"]
+	path = src/libs/baton
+	url = https://github.com/tesselode/baton.git
+[submodule "src/libs/sti"]
+	path = src/libs/sti
+	url = https://github.com/karai17/Simple-Tiled-Implementation.git
