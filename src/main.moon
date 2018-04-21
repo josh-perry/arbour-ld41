@@ -4,11 +4,15 @@ log = require("libs/log/log")
 lovebite = require("libs/lovebite/lovebite")
 sti = require("libs/sti/sti")
 
-local map
-
 setupGlobals = ->
   _G.log = log
   _G.lovebite = lovebite
+  _G.gamestates = {
+    menu: require("menu"),
+    game: require("game")
+  }
+
+  _G.gamestate = require("libs/hump.gamestate")
 
 setupScreen = ->
   lovebite\setMode({
@@ -24,7 +28,8 @@ love.load = ->
   setupScreen!
   setupGlobals!
 
-  map = sti("libs/sti/tests/hex.lua")
+  _G.gamestate.registerEvents({"update"})
+  _G.gamestate.switch(_G.gamestates.menu)
 
   log.info("Load complete")
 
@@ -32,9 +37,6 @@ love.draw = ->
   lovebite\startDraw!
   love.graphics.setColor(1, 1, 1)
 
-  map\draw!
+  _G.gamestate.current!\draw!
 
   lovebite\endDraw!
-
-love.update = (dt) ->
-  map\update(dt)
