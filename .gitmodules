@@ -22,3 +22,9 @@
 [submodule "src/libs/sti"]
 	path = src/libs/sti
 	url = https://github.com/karai17/Simple-Tiled-Implementation.git
+[submodule "src/libs/cron"]
+	path = src/libs/cron
+	url = https://github.com/kikito/cron.lua.git
+[submodule "src/libs/bump"]
+	path = src/libs/bump
+	url = https://github.com/kikito/bump.lua.git
